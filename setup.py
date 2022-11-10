@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="st-highlightable-text",
-    version="0.1.0",
+    version="0.1.1",
     author="Theo Stosse",
     author_email="tstosse@advaes.com",
     description="Highlightable text for data labelling.",
