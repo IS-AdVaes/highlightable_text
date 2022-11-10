@@ -8,7 +8,8 @@ import HighlightedSpan from "./HighlightedSpan";
 import {
     ControlledMenu,
     MenuItem,
-    useMenuState
+    useMenuState,
+    MenuDivider
 } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 
@@ -101,6 +102,7 @@ const TextZone = (props: ComponentProps) => {
         0
       )]);
       Streamlit.setComponentValue(datas)
+      Streamlit.setFrameHeight(300)
   }
 
   const highlightHandle1: any = (e: Event) => {
@@ -113,6 +115,7 @@ const TextZone = (props: ComponentProps) => {
         1
       )]);
       Streamlit.setComponentValue(datas)
+      Streamlit.setFrameHeight(300)
   }
 
   const highlightHandle2: any = (e: Event) => {
@@ -125,6 +128,7 @@ const TextZone = (props: ComponentProps) => {
         2
       )]);
       Streamlit.setComponentValue(datas)
+      Streamlit.setFrameHeight(300)
   }
 
   const highlightHandle3: any = (e: Event) => {
@@ -137,10 +141,11 @@ const TextZone = (props: ComponentProps) => {
         3
       )]);
       Streamlit.setComponentValue(datas)
+      Streamlit.setFrameHeight(300)
   }
 
   useEffect(() => {
-    Streamlit.setFrameHeight(1000)
+    Streamlit.setFrameHeight(300)
   });
 
   useEffect(() => {
@@ -165,10 +170,12 @@ const TextZone = (props: ComponentProps) => {
     </p>}
     <ControlledMenu {...menuProps} anchorPoint={anchorPoint}
                 onClose={() => toggleMenu(false)}>
-                <MenuItem onClick={highlightHandle0}>lvl 0</MenuItem>
-                <MenuItem onClick={highlightHandle1}>lvl 1</MenuItem>
-                <MenuItem onClick={highlightHandle2}>lvl 2</MenuItem>
-                <MenuItem onClick={highlightHandle3}>lvl 3</MenuItem>
+                <MenuItem onClick={highlightHandle0}>No interest</MenuItem>
+                <MenuItem onClick={highlightHandle1}>Context</MenuItem>
+                <MenuItem onClick={highlightHandle2}>KPI data</MenuItem>
+                <MenuItem onClick={highlightHandle3}>Relevant sentence/chunk</MenuItem>
+                <MenuDivider/>
+                <MenuItem>Go to page</MenuItem>
             </ControlledMenu>
     </>
    

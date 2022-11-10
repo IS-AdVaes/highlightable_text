@@ -15,7 +15,7 @@ else:
 
 # Define a public function for the package,
 # which wraps the caller to the frontend code
-def highlightable_text(data):
-    component_value = _component_func(data=data)
+def highlightable_text(data, key):
+    component_value = _component_func(data=data, key=key)
     return component_value
 
